@@ -18,4 +18,3 @@ asyncpg==0.30.0
 
 
 
-postgresql+asyncpg://neondb_owner:npg_0Fn7XwvRpgxd@ep-misty-lake-aoldqkb8-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?ssl=require

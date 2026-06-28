@@ -1,0 +1,1 @@
+"""CompanionConnect FastAPI Backend"""

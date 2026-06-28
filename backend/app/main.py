@@ -57,12 +57,20 @@ def create_app() -> FastAPI:
     # REST API routes
     app.include_router(api_router, prefix=settings.API_V1_PREFIX)
 
+    @app.get("/")
+    async def root():
+        return {
+        "message": "CompanionConnect API is running",
+        "docs": "/docs",
+        "status": "ok"
+    }
+
     # Health check
     @app.get("/health", tags=["Health"])
     async def health_check():
         return {"status": "ok", "app": settings.APP_NAME, "version": "2.0.0"}
 
     return app
-
+   
 
 app = create_app()
